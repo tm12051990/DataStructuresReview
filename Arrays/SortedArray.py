@@ -1,5 +1,6 @@
 from multiprocessing import Value
 from array import array
+from module1 import DynamicArray
 
 class SortedArray:
 
@@ -86,17 +87,15 @@ class SortedArray:
 
 
 if __name__ == "__main__":
-    arr = SortedArray(10)
+    arr = DynamicArray(20)
 
-    arr.insert(10)
-    arr.insert(5)
-    arr.insert(7)
-    arr.insert(22)
-    arr.insert(14)
-    arr.insert(2)
-    arr.insert(45)
-    arr.insert(1)
+    arr.append(20)
+    arr.append(10)
+    arr.append(5)
+    arr.insert(3, 2)
 
-    print("searching for 22")
+    print(arr)
 
-    print(arr.binary_search(22))
+    arr.delete(20)
+
+    print(arr)
