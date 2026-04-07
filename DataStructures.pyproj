@@ -24,9 +24,11 @@
   <ItemGroup>
     <Compile Include="Arrays\DynamicArray.py" />
     <Compile Include="Arrays\SortedArray.py" />
+    <Compile Include="LinkedLists\SinglyLinkedList.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Arrays\" />
+    <Folder Include="LinkedLists\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

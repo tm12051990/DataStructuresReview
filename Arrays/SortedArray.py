@@ -1,6 +1,7 @@
 from multiprocessing import Value
 from array import array
-from module1 import DynamicArray
+from Arrays.DynamicArray import DynamicArray
+from LinkedLists.SinglyLinkedList import SinglyLinkedList
 
 class SortedArray:
 
@@ -87,15 +88,27 @@ class SortedArray:
 
 
 if __name__ == "__main__":
-    arr = DynamicArray(20)
+    sll = SinglyLinkedList()
 
-    arr.append(20)
-    arr.append(10)
-    arr.append(5)
-    arr.insert(3, 2)
+    print("Empty?", sll.is_empty())
 
-    print(arr)
+    sll.insert_at_front(10)
+    sll.insert_at_front(15)
+    sll.insert_at_front(20)
+    sll.insert_at_front(25)
 
-    arr.delete(20)
+    print("Empty?", sll.is_empty())
 
-    print(arr)
+    print(str(sll))
+
+    sll.insert_at_back(30)
+
+    print(str(sll))
+
+    sll.delete(15)
+
+    print(str(sll))
+
+    print(sll.search(lambda x : x > 10))
+    sll.delete_from_front()
+    print(str(sll))
